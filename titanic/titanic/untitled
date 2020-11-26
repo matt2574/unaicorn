@@ -1,12 +1,11 @@
-[Unit]
-Description=gunicorn daemon
-After=network.target
+  server { 
+    listen 80;
 
-[Service]
-User=​ubuntu
-Group=www-data
-WorkingDirectory=/home/​ubuntu/unaicorn_new/titanic
-ExecStart=/hom​e/ubuntu/.local/​bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/​ubuntu/unaicorn_new/titanic​/​titanic.sock ​[django project name]​.wsgi:application
+  server_name​ 18.223.160.250​;
+  location = /favicon.ico { access_log off; log_not_found off; }
 
-[Install]
-WantedBy=multi-user.target
+  location / {
+    include proxy_params;
+    proxy_pass http://unix:/home/​ubuntu/unaicorn_new​/titanic/​titanic​.sock;
+  }
+}
