@@ -25,7 +25,7 @@ SECRET_KEY = 'fz_n2g*pv)fr0nuyt5c37u%jii3-8jmpm-(#uw#0*_ld%xnj67'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["18.223.160.250","unaicorn.unaicorn.net","www.unaicorn.net"]
 
 
 # Application definition
